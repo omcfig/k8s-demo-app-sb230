@@ -56,12 +56,13 @@
 						<image>openjdk:8u222-slim</image>
 					</from> 
 					<to>
-						<image>k8s-demo-app-sb230</image> 
+						<image>omcfig/labs:k8s-demo-app-sb230</image> 
 					</to>
 					<container> 
 						<user>nobody:nogroup</user>
 					</container> 
 				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
