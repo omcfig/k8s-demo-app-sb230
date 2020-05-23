@@ -56,15 +56,22 @@
 						<image>openjdk:8u222-slim</image>
 					</from> 
 					<to>
-						<image>omcfig/labs:k8s-demo-app-sb230</image> 
+						<image>omcfig/k8s-demo-app-sb230</image> 
 					</to>
 					<container> 
 						<user>nobody:nogroup</user>
 					</container> 
 				</configuration>
-
+				<!-- run ./mvnw clean package to push to docker repo   -->
+				<executions> 
+					<execution>
+						<phase>package</phase> 
+						<goals>
+							<goal>build</goal> 
+						</goals>
+					</execution> 
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
