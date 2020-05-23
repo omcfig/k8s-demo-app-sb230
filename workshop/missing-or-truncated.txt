@@ -1,2 +1,6 @@
 Page 10 - Deployment Descriptor
 kubectl create deployment k8s-demo-app-sb230 --image omcfig/k8s-demo-app-sb230 -o yaml --dry-run > k8s/deployment.yaml
+
+Page 11 - Service Descriptor
+kubectl create service clusterip k8s-demo-app-sb230 --tcp 80:8080 -o yaml --dry-run > k8s/service.yaml
+
