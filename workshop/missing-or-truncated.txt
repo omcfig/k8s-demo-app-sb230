@@ -1,0 +1,2 @@
+Page 10 - Deployment Descriptor
+kubectl create deployment k8s-demo-app-sb230 --image omcfig/k8s-demo-app-sb230 -o yaml --dry-run > k8s/deployment.yaml
