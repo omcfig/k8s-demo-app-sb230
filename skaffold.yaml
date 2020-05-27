@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta4
+kind: Config
+metadata:
+  name: k-s-demo-app-sb-
+build:
+  artifacts:
+  - image: omcfig/k8s-demo-app-sb230
+    jib: {}
+deploy:
+  kubectl:
+    manifests:
+    - k8s/deployment.yaml
+    - k8s/service.yaml

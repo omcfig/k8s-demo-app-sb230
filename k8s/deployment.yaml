@@ -19,6 +19,18 @@ spec:
     spec:
       containers:
       - image: omcfig/k8s-demo-app-sb230
+        readinessProbe:
+          httpGet:
+            port: 8080
+            path: /actuator/health/readiness
+        livenessProbe:
+          httpGet:
+            port: 8080
+            path: /actuator/health/liveness
+        lifecycle:
+          preStop:
+            exec:
+              command: ["sh", "-c", "sleep 10"]    
         name: k8s-demo-app-sb230
         resources: {}
 status: {}

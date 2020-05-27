@@ -15,7 +15,8 @@ public class K8sDemoApplication {
 
 	@GetMapping("/")
 	public String hello() {
-		return "Hello World";
+		String retVal = "Wowzwers!";
+		return retVal;
 	}
 
 }
